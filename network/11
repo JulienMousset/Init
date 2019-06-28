@@ -1,0 +1,2 @@
+The device that makes the link between us (local network) and the outside world is nat-1 (10.60.1.11).
+It's the Network Address Translation which establishes the traffic between a public IP address and an IP address on the client's network.

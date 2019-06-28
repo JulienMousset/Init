@@ -1,0 +1,2 @@
+To log in as this new user in graphical session, you just need your id and password.
+Otherwise, you can use this command : sudo su - username

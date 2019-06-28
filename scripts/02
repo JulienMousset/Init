@@ -1,0 +1,4 @@
+#!/bin/bash
+pgrep -u username
+killall -9 -u username
+userdel -rf username

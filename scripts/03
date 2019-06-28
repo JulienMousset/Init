@@ -1,0 +1,39 @@
+#!/bin/bash
+tmp="$HOME/tmp"
+
+if [ "$1" = "new" ]
+then
+	rm "$tmp"
+fi
+
+function main()
+{
+	check_timer
+	start_timer
+	exit 0
+}
+
+function check_timer()
+{
+	if [ -f "$tmp" ]
+	then
+		let start_time="$(cat $tmp)";
+	else
+		let start_time="$(date +%s)";
+		echo "$start_time" > "$tmp"
+	fi
+}
+
+function start_timer()
+{
+	while [ 1 ];
+	do
+		let current_time="$(date +%s)"
+		let seconds=$current_time-$start_time;
+		printf "\e[91m%02d\e[93m:%02d:%02d:%02d \e[97m- To restart the timer, run \e[96msh $0 new\e[97m.\n\e[2mOtherwise, it will pick up where you left off.\e[0m" "$((seconds/86400))" "$((seconds/3600%24))" "$((seconds/60%60))" "$((seconds%60))"
+		sleep 1;
+		clear;
+	done
+}
+
+main

@@ -1,0 +1,3 @@
+You need to add the following informations (46.19.122.85 intra.42.fr) in the etc/hosts file, but you would need the admin rights to write there.
+Then, for example, you could use that command :
+echo "46.19.122.85 intra.42.fr" >> /etc/hosts

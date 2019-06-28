@@ -1,0 +1,1 @@
+To make the system's name change permanent, you need to modify the name in the file /etc/hosts or in the file /etc/hostname.

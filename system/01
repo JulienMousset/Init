@@ -1,0 +1,2 @@
+The current Debian version installed can be found in /etc/debian_version.
+The command "cat /etc/debian_version" shows that we are using the 9.9 version.
